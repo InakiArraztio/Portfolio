@@ -1,0 +1,88 @@
+:root {
+  --bg-nav: #121212;
+  --text-muted: #9e9e9e;
+  --violet-primary: #a87ffb; 
+  --text-light: #ffffff;
+}
+html{
+  scroll-behavior: smooth;
+  scroll-padding-top: 5%;
+}
+@keyframes entrar-seccion {
+    from {
+        opacity: 0.5;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.background-portfolio {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #111;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.04) 1px, #0000008c 1px);
+    background-size: 32px 32px;     
+    background-position: center center;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: #1e1e24; 
+  padding: 40px; 
+}
+
+.top-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg-nav);
+  padding: 12px 24px;
+  border-radius: 16px; 
+  max-width: 1000px;
+  margin: 0 auto; 
+  box-shadow: 0px 0px 20px rgba(139, 92, 246, 0.29);
+  position: sticky;
+  top: 25px;
+  z-index: 999;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--text-light);
+}
+
+
+.nav-links a.active {
+  color: var(--violet-primary);
+}
+
+
+.nav-links a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -6px; 
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--violet-primary);
+  border-radius: 2px;
+}
