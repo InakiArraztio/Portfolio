@@ -1,13 +1,15 @@
 :root {
   --bg-nav: #121212;
   --text-muted: #9e9e9e;
-  --violet-primary: #a87ffb; 
+  --cyan-primary: #22d3ee;
   --text-light: #ffffff;
 }
+
 html{
   scroll-behavior: smooth;
   scroll-padding-top: 5%;
 }
+
 @keyframes entrar-seccion {
     from {
         opacity: 0.5;
@@ -34,6 +36,8 @@ body {
   padding: 40px; 
 }
 
+/*ESTILOS PARA NAVBAR Y NAVEGACION*/
+
 .top-navbar {
   display: flex;
   justify-content: space-between;
@@ -43,7 +47,7 @@ body {
   border-radius: 16px; 
   max-width: 1000px;
   margin: 0 auto; 
-  box-shadow: 0px 0px 20px rgba(139, 92, 246, 0.29);
+  box-shadow: 0px 0px 20px rgba(92, 210, 246, 0.29);
   position: sticky;
   top: 25px;
   z-index: 999;
@@ -70,11 +74,9 @@ body {
   color: var(--text-light);
 }
 
-
 .nav-links a.active {
-  color: var(--violet-primary);
+  color: var(--cyan-primary);
 }
-
 
 .nav-links a.active::after {
   content: '';
@@ -83,6 +85,302 @@ body {
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: var(--violet-primary);
+  background-color: var(--cyan-primary);
   border-radius: 2px;
+}
+
+/*BOTONES Y ESTILOS DE LA CARD DE PRESENTACION*/
+
+.btn-contacto {
+  background-color: var(--violet-primary);
+  color: var(--text-light);
+  text-decoration: none;
+  padding: 10px 24px;
+  border-radius: 20px; 
+  font-size: 15px;
+  font-weight: 600;
+  transition: opacity 0.3s ease;
+}
+
+.btn-contacto:hover {
+  opacity: 0.8;
+}
+
+.seccion-hero {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.hero-contenedor {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  max-width: 1100px;
+  width: 100%;
+  padding: 0 40px;
+}
+
+.hero-texto h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  letter-spacing: -1px;
+}
+
+.texto-violeta {
+  color: var(--cyan-primary, #22d3ee);
+}
+
+.hero-texto p {
+  font-size: 1rem;
+  color: #a1a1aa;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.hero-botones {
+  display: flex;
+  gap: 16px;
+}
+
+.btn-primario, .btn-secundario {
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primario {
+  background-color: var(--cyan-primary, #22d3ee);
+  color: #ffffff;
+}
+
+.btn-primario:hover {
+  background-color: #22d3ee;
+  transform: translateY(-4px);
+}
+
+.btn-secundario {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid var(--cyan-primary, #22d3ee);
+}
+
+.btn-secundario:hover{
+  border-color: var(--cyan-primary, #22d3ee);
+  box-shadow: 0 0 15px rgba(168, 127, 251, 0.15);
+  background-color: rgba(168, 127, 251, 0.1);
+  transform: translateY(-4px);
+}
+
+/*SECCION HABILIDADES/SKILLS/TECNOLOGIA*/
+.skills {
+    padding: 120px 10%;
+    background: transparent;
+}
+
+.skills-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.skills-header h2 {
+    font-size: 3.5rem;
+    color: white;
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+
+.skills-header p {
+    color: #9ca3af;
+    margin-top: 10px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.skill-card {
+    background: #0f0f12;
+    border: 1px solid #1f1f25;
+    border-radius: 24px;
+    padding: 30px;
+    transition: 0.3s ease;
+}
+
+.skill-card h2 {
+    color: white;
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--cyan-primary);
+    box-shadow: 0 0 20px rgba(34, 211, 238, 0.12), 0 0 40px rgba(34, 211, 238, 0.08);
+}
+
+.tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.tech-list span {
+    padding: 10px 16px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    color: white;
+    font-size: 0.95rem;
+    transition: 0.3s ease;
+}
+
+.tech-list span:hover {
+    border-color: var(--cyan-primary);
+    transform: translateY(-3px);
+    box-shadow: 0 0 12px rgba(34, 211, 238, 0.15);
+}
+
+.skill-card h3 {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.tech-list span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+
+/*FOOTER Y CONTACTO?*/
+
+.footer {
+    padding: 80px 10% 30px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    background: rgba(255,255,255,0.01);
+    margin-top: 120px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.footer-brand {
+    max-width: 300px;
+}
+
+.footer-logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: var(--cyan-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-weight: 800;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(34, 211, 238, 0.2);
+}
+
+.footer-brand h3 {
+    color: white;
+    font-size: 1.8rem;
+    margin-bottom: 16px;
+}
+.footer-brand p {
+    color: #9ca3af;
+    line-height: 1.7;
+}
+
+.footer-links,
+.footer-social {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-links h4,
+.footer-social h4 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.footer-links a {
+    color: #9ca3af;
+    text-decoration: none;
+    margin-bottom: 12px;
+    transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--cyan-primary);
+    transform: translateX(5px);
+}
+
+.social-icons {
+    display: flex;
+    gap: 14px;
+}
+
+.social-icons a {
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+    border-color: var(--cyan-primary);
+    color: var(--cyan-primary);
+    transform: translateY(-4px);
+    box-shadow: 0 0 20px rgba(34, 211, 238, 0.15);
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-bottom p {
+    color: #71717a;
+}
+
+@media (max-width: 768px) {
+    .footer-top {
+        flex-direction: column;
+    }
+    .footer-bottom {
+        flex-direction: column;
+    }
 }
