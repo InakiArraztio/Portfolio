@@ -32,8 +32,8 @@ html{
 
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  background-color: #1e1e24; 
-  padding: 40px; 
+  background-color: #1e1e24;
+  margin: 0;
 }
 
 /*ESTILOS PARA NAVBAR Y NAVEGACION*/
@@ -183,7 +183,7 @@ body {
 
 /*SECCION HABILIDADES/SKILLS/TECNOLOGIA*/
 .skills {
-    padding: 120px 10%;
+    padding: 80px 6% 40px;
     background: transparent;
 }
 
@@ -264,10 +264,6 @@ body {
     align-items: center;
     gap: 10px;
 }
-
-
-
-/*FOOTER Y CONTACTO?*/
 
 .footer {
     padding: 80px 10% 30px;
@@ -374,6 +370,309 @@ body {
 
 .footer-bottom p {
     color: #71717a;
+}
+
+/* ========================= PROYECTOS ========================= */
+
+.projects {
+    padding: 40px 6% 80px;
+}
+
+.projects-header {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.projects-header h2 {
+    font-size: 3.2rem;
+    color: white;
+    font-weight: 800;
+    letter-spacing: -2px;
+    margin-bottom: 16px;
+}
+
+.projects-header p {
+    color: #9ca3af;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+}
+
+/* ========================= CONTACTO ========================= */
+
+.contact {
+    padding: 80px 6%;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.contact-header h2 {
+    font-size: 3.2rem;
+    color: white;
+    font-weight: 800;
+    letter-spacing: -2px;
+    margin-bottom: 16px;
+}
+
+.contact-header p {
+    color: #9ca3af;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-form {
+    background: #0f0f12;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 28px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 16px 18px;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s ease;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+    color: #71717a;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: var(--cyan-primary);
+    box-shadow: 0 0 20px rgba(34, 211, 238, 0.10);
+}
+
+.input-group textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+.contact-btn {
+    background: var(--cyan-primary);
+    color: black;
+    border: none;
+    border-radius: 16px;
+    padding: 16px 24px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.contact-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 25px rgba(34, 211, 238, 0.20);
+}
+
+/* CARD */
+
+.project-card {
+    background: #0f0f12;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 28px;
+    overflow: hidden;
+    transition: 0.35s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--cyan-primary);
+    box-shadow: 0 0 25px rgba(34, 211, 238, 0.10), 0 0 50px rgba(34, 211, 238, 0.06);
+}
+
+/* IMAGEN */
+
+.project-image {
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.05);
+}
+
+/* CONTENIDO */
+
+.project-content {
+    padding: 30px;
+}
+
+.project-content h3 {
+    color: white;
+    font-size: 1.7rem;
+    margin-bottom: 16px;
+}
+
+.project-content p {
+    color: #9ca3af;
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
+/* TECNOLOGIAS */
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 28px;
+}
+
+.project-tech span {
+    padding: 10px 16px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    color: white;
+    font-size: 0.9rem;
+    transition: 0.3s ease;
+}
+
+.project-tech span:hover {
+    border-color: var(--cyan-primary);
+    box-shadow: 0 0 12px rgba(34, 211, 238, 0.15);
+}
+
+/* LINKS */
+
+.project-links {
+    display: flex;
+    gap: 16px;
+}
+
+.project-links a {
+    padding: 12px 22px;
+    border-radius: 14px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+/* BOTON GITHUB */
+
+.project-links a:first-child {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    color: white;
+}
+
+.project-links a:first-child:hover {
+    border-color: var(--cyan-primary);
+    color: var(--cyan-primary);
+    transform: translateY(-3px);
+}
+
+/* BOTON DEMO */
+
+.project-links a:last-child {
+    background: var(--cyan-primary);
+    color: black;
+}
+
+.project-links a:last-child:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(34, 211, 238, 0.25);
+}
+
+/* ========================= SOBRE MI ========================= */
+
+.about {
+    padding: 80px 6%;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.about-header h2 {
+    font-size: 3.2rem;
+    color: white;
+    font-weight: 800;
+    letter-spacing: -2px;
+    margin-bottom: 16px;
+}
+
+.about-header p {
+    color: #9ca3af;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.about-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about-card {
+    background: #0f0f12;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 28px;
+    padding: 45px;
+    transition: 0.3s ease;
+}
+
+.about-card:hover {
+    border-color: var(--cyan-primary);
+    box-shadow: 0 0 25px rgba(34, 211, 238, 0.10);
+}
+
+.about-card p {
+    color: #cbd5e1;
+    line-height: 1.9;
+    margin-bottom: 24px;
+    font-size: 1.05rem;
+}
+
+.texto-cyan {
+    color: var(--cyan-primary);
+    font-weight: 600;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 768px) {
